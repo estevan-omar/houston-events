@@ -1,5 +1,3 @@
-const apiKey = "nOKuiHUDHIeUTwEOZQCl5B9z11FZuVu2"
-
 const container = document.getElementById("events-container")
 
 const loading = document.getElementById("loading")
