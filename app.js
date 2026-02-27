@@ -10,6 +10,12 @@ searchBar.addEventListener("input", function() {
 
 let allEvents = []
 
+const map = L.map("map").setView([29.7604, -95.3698], 11)
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: "© OpenStreetMap contributors"
+}).addTo(map)
+
 fetch(`https://app.ticketmaster.com/discovery/v2/events.json?city=Houston&apikey=${apiKey}`)
     .then(function(response){
         return response.json()
